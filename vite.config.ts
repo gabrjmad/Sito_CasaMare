@@ -3,7 +3,11 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    // Tutti i plugin "@replit/vite-plugin-*" sono rimossi.
+    // Se vuoi error overlay, puoi aggiungere plugin standard come vite-plugin-error-overlay esterni, ma qui NON servono.
+  ],
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),

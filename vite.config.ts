@@ -3,12 +3,7 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 
 export default defineConfig({
-  plugins: [
-    react(),
-    // I plugin Replit (cartographer, dev-banner, runtimeErrorOverlay)
-    // non sono necessari in produzione e creano problemi su Render,
-    // quindi li togliamo per il build di produzione.
-  ],
+  plugins: [react()],
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
